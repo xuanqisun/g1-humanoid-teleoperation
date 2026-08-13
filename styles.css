@@ -29,6 +29,47 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.language-switch {
+  position: fixed;
+  z-index: 20;
+  top: 24px;
+  right: max(24px, calc((100vw - var(--shell)) / 2));
+  display: flex;
+  padding: 3px;
+  border: 1px solid rgba(238, 242, 235, 0.24);
+  background: rgba(7, 17, 15, 0.68);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.language-switch button {
+  min-width: 48px;
+  padding: 8px 10px;
+  border: 0;
+  color: rgba(238, 242, 235, 0.58);
+  background: transparent;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.language-switch button:hover {
+  color: var(--paper);
+}
+
+.language-switch button[aria-pressed="true"] {
+  color: var(--ink);
+  background: var(--signal);
+}
+
+.language-switch button:focus-visible {
+  outline: 2px solid var(--aqua);
+  outline-offset: 2px;
+}
+
 video {
   display: block;
 }
@@ -117,7 +158,7 @@ video {
   line-height: 0.82;
 }
 
-.hero h1 span {
+.hero h1 .hero__title-secondary {
   color: rgba(209, 224, 217, 0.82);
   text-shadow: 0 0 36px rgba(105, 232, 207, 0.09);
 }
@@ -348,6 +389,16 @@ video {
   display: block;
 }
 
+.camera-title__lead {
+  display: inline-block;
+  margin-right: 0.22em;
+  color: rgba(238, 242, 235, 0.78);
+  font-size: 0.62em;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  vertical-align: 0.1em;
+}
+
 .camera-title strong {
   position: relative;
   display: inline-block;
@@ -495,6 +546,11 @@ video {
   border-radius: 50%;
   background: var(--signal);
   box-shadow: 0 0 10px rgba(198, 255, 73, 0.8);
+}
+
+.three-point-demo__signal b,
+.camera-demo__signal b {
+  font: inherit;
 }
 
 .three-point-demo__input {
@@ -753,6 +809,16 @@ footer {
 
   .hero {
     min-height: 92svh;
+  }
+
+  .language-switch {
+    top: 16px;
+    right: 16px;
+  }
+
+  .language-switch button {
+    min-width: 43px;
+    padding: 7px 8px;
   }
 
   .hero__video {
