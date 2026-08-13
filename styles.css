@@ -319,6 +319,15 @@ video {
   margin-left: clamp(0px, 7vw, 104px);
 }
 
+.mode-card--camera .mode-card__heading {
+  max-width: 1180px;
+}
+
+.mode-card--camera h3 {
+  max-width: 1120px;
+  font-size: clamp(44px, 5.6vw, 82px);
+}
+
 .three-point-demo {
   max-width: 1180px;
   margin: 0 0 0 auto;
@@ -456,6 +465,126 @@ video {
 }
 
 .three-point-demo figcaption small {
+  color: #849289;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+}
+
+.camera-demo {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(105, 232, 207, 0.22);
+  background: #091410;
+  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.28);
+}
+
+.camera-demo__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #07110f;
+}
+
+.camera-demo__visual::after {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  content: "";
+  background: linear-gradient(transparent, rgba(198, 255, 73, 0.72), transparent);
+  pointer-events: none;
+}
+
+.camera-demo__scan {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--signal), transparent);
+  box-shadow: 0 0 18px rgba(198, 255, 73, 0.75);
+  opacity: 0.75;
+  animation: camera-scan 4.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes camera-scan {
+  0%, 100% { transform: translateY(12px); opacity: 0.3; }
+  50% { transform: translateY(clamp(120px, 24vw, 390px)); opacity: 0.85; }
+}
+
+.camera-demo__video {
+  width: 100%;
+  aspect-ratio: 32 / 9;
+  object-fit: cover;
+  background: #07110f;
+}
+
+.camera-demo__signal {
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0;
+  padding: 8px 10px;
+  color: rgba(238, 242, 235, 0.72);
+  background: rgba(7, 17, 15, 0.72);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  pointer-events: none;
+}
+
+.camera-demo__signal--input { left: 18px; }
+.camera-demo__signal--output { right: 18px; }
+
+.camera-demo__signal span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 10px rgba(198, 255, 73, 0.8);
+}
+
+.camera-demo__play {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.camera-demo__play:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.camera-demo__play.is-hidden {
+  transform: translateX(-50%) scale(0.85);
+}
+
+.camera-demo figcaption {
+  display: flex;
+  gap: 14px;
+  min-height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 19px;
+  border-top: 1px solid rgba(105, 232, 207, 0.16);
+  color: #eff3ed;
+  background: #101915;
+}
+
+.camera-demo figcaption span {
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.camera-demo figcaption small {
   color: #849289;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 8px;
@@ -642,6 +771,30 @@ footer {
   .three-point-demo__play {
     width: 64px;
     height: 64px;
+  }
+
+  .camera-demo__visual {
+    min-height: 230px;
+  }
+
+  .camera-demo__video {
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+  }
+
+  .camera-demo__signal {
+    top: 10px;
+    padding: 6px 7px;
+    font-size: 7px;
+  }
+
+  .camera-demo__signal--input { left: 10px; }
+  .camera-demo__signal--output { right: 10px; }
+
+  .camera-demo figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .video-stack {

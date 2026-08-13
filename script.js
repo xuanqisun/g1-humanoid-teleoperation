@@ -50,30 +50,32 @@ if (!("IntersectionObserver" in window)) {
   lazyVideos.forEach((video) => videoObserver.observe(video));
 }
 
-const threePointVideo = document.querySelector(".three-point-demo__video");
-const threePointPlay = document.querySelector(".three-point-demo__play");
+const mediaPlayButtons = document.querySelectorAll(".media-play");
 
-if (threePointVideo && threePointPlay) {
-  const syncThreePointPlayButton = () => {
-    threePointPlay.classList.toggle("is-hidden", !threePointVideo.paused);
+mediaPlayButtons.forEach((playButton) => {
+  const video = playButton.parentElement?.querySelector("video");
+  if (!video) return;
+
+  const syncPlayButton = () => {
+    playButton.classList.toggle("is-hidden", !video.paused);
   };
 
-  threePointPlay.addEventListener("click", async () => {
-    loadVideo(threePointVideo);
+  playButton.addEventListener("click", async () => {
+    loadVideo(video);
 
     try {
-      await threePointVideo.play();
+      await video.play();
     } catch (error) {
-      console.warn("Unable to start the 3-point VR video.", error);
+      console.warn("Unable to start the video.", error);
     }
 
-    syncThreePointPlayButton();
+    syncPlayButton();
   });
 
-  threePointVideo.addEventListener("play", syncThreePointPlayButton);
-  threePointVideo.addEventListener("pause", syncThreePointPlayButton);
-  threePointVideo.addEventListener("ended", syncThreePointPlayButton);
-}
+  video.addEventListener("play", syncPlayButton);
+  video.addEventListener("pause", syncPlayButton);
+  video.addEventListener("ended", syncPlayButton);
+});
 
 if (reducedMotion) {
   document.querySelector(".hero__video")?.pause();

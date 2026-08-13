@@ -184,7 +184,7 @@
                   <source data-src="assets/videos/3pt-demo.mp4" type="video/mp4" />
                 </video>
                 <button
-                  class="three-point-demo__play"
+                  class="three-point-demo__play media-play"
                   type="button"
                   aria-label="Play 3-point VR teleoperation video"
                 >
@@ -197,6 +197,53 @@
               <figcaption>
                 <span>3-Point VR Control</span>
                 <small>NO ANKLE TRACKERS</small>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="mode-card mode-card--camera reveal">
+            <div class="mode-card__number">03</div>
+            <div class="mode-card__heading">
+              <p class="mode-card__type">ONE CAMERA · NO WEARABLES</p>
+              <h3>Take off every wearable.<br />Teleoperate with just one camera.</h3>
+              <p>
+                No headset, controllers, or body trackers. A single camera
+                captures human motion and turns it into whole-body robot control.
+              </p>
+            </div>
+
+            <figure class="camera-demo">
+              <div class="camera-demo__visual">
+                <div class="camera-demo__scan" aria-hidden="true"></div>
+                <p class="camera-demo__signal camera-demo__signal--input" aria-hidden="true">
+                  <span></span> CAMERA INPUT
+                </p>
+                <p class="camera-demo__signal camera-demo__signal--output" aria-hidden="true">
+                  ROBOT OUTPUT <span></span>
+                </p>
+                <video
+                  class="camera-demo__video lazy-video"
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  poster="assets/images/camera-poster.jpg"
+                  aria-label="Single-camera whole-body teleoperation demonstration"
+                >
+                  <source data-src="assets/videos/camera-teleop.mp4" type="video/mp4" />
+                </video>
+                <button
+                  class="three-point-demo__play camera-demo__play media-play"
+                  type="button"
+                  aria-label="Play single-camera teleoperation video"
+                >
+                  <span aria-hidden="true"></span>
+                </button>
+              </div>
+              <figcaption>
+                <span lang="zh-CN">摄像头遥操</span>
+                <small>ONE CAMERA · NO WEARABLES</small>
               </figcaption>
             </figure>
           </article>
