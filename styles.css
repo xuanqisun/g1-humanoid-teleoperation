@@ -218,12 +218,9 @@ video {
   display: flex;
   min-height: 100%;
   flex-direction: column;
-  background:
-    radial-gradient(circle at 30% 15%, rgba(105, 232, 207, 0.13), transparent 34%),
-    #0c1916;
 }
 
-.mode-card--wholebody {
+.mode-card--light {
   background: var(--paper);
   color: var(--ink);
 }
@@ -238,7 +235,7 @@ video {
   letter-spacing: 0.15em;
 }
 
-.mode-card--wholebody .mode-card__number {
+.mode-card--light .mode-card__number {
   color: rgba(7, 17, 15, 0.38);
 }
 
@@ -255,7 +252,7 @@ video {
   letter-spacing: 0.14em;
 }
 
-.mode-card--wholebody .mode-card__type {
+.mode-card--light .mode-card__type {
   color: #247f6e;
 }
 
@@ -275,7 +272,7 @@ video {
   line-height: 1.7;
 }
 
-.mode-card--wholebody .mode-card__heading > p:last-child {
+.mode-card--light .mode-card__heading > p:last-child {
   color: #5b665f;
 }
 
