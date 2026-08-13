@@ -50,6 +50,31 @@ if (!("IntersectionObserver" in window)) {
   lazyVideos.forEach((video) => videoObserver.observe(video));
 }
 
+const threePointVideo = document.querySelector(".three-point-demo__video");
+const threePointPlay = document.querySelector(".three-point-demo__play");
+
+if (threePointVideo && threePointPlay) {
+  const syncThreePointPlayButton = () => {
+    threePointPlay.classList.toggle("is-hidden", !threePointVideo.paused);
+  };
+
+  threePointPlay.addEventListener("click", async () => {
+    loadVideo(threePointVideo);
+
+    try {
+      await threePointVideo.play();
+    } catch (error) {
+      console.warn("Unable to start the 3-point VR video.", error);
+    }
+
+    syncThreePointPlayButton();
+  });
+
+  threePointVideo.addEventListener("play", syncThreePointPlayButton);
+  threePointVideo.addEventListener("pause", syncThreePointPlayButton);
+  threePointVideo.addEventListener("ended", syncThreePointPlayButton);
+}
+
 if (reducedMotion) {
   document.querySelector(".hero__video")?.pause();
 }
