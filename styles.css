@@ -442,10 +442,10 @@ video {
 }
 
 html[lang="zh-CN"] .hero h1 {
-  font-size: clamp(58px, 8.2vw, 124px);
+  font-size: clamp(52px, 7.2vw, 108px);
   font-weight: 600;
-  letter-spacing: -0.055em;
-  line-height: 0.9;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
 }
 
 html[lang="zh-CN"] .section-intro h2 {
@@ -885,8 +885,8 @@ footer {
   }
 
   html[lang="zh-CN"] .hero h1 {
-    font-size: clamp(43px, 12.8vw, 54px);
-    line-height: 0.95;
+    font-size: clamp(38px, 11.2vw, 47px);
+    line-height: 1.18;
   }
 
   .hero__lede {
