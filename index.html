@@ -6,23 +6,26 @@
     <meta name="theme-color" content="#07110f" />
     <meta
       name="description"
-      content="SONIC humanoid teleoperation on Unitree G1: 3-point VR control and full-body motion tracking."
+      content="Full-body humanoid teleoperation on Unitree G1, plus 3-point VR control without ankle trackers, from 浙江大学湖州研究院智能跨域机器人研究中心."
     />
 
-    <meta property="og:title" content="SONIC × G1 — Humanoid Teleoperation" />
+    <meta
+      property="og:title"
+      content="浙江大学湖州研究院智能跨域机器人研究中心 — Humanoid Teleoperation"
+    />
     <meta
       property="og:description"
-      content="Immersive 3-point VR control and full-body motion tracking for a humanoid robot."
+      content="Full-body teleoperation on Unitree G1, with a lightweight 3-point VR mode that works without ankle trackers."
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content="https://xuanqisun.github.io/sonic-g1-teleop-page/assets/images/hero-poster.jpg"
+      content="https://xuanqisun.github.io/sonic-g1-teleop-page/assets/images/kick-poster.jpg"
     />
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="720" />
 
-    <title>SONIC × G1 — Humanoid Teleoperation</title>
+    <title>浙江大学湖州研究院智能跨域机器人研究中心 — Humanoid Teleoperation</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -36,23 +39,25 @@
         loop
         playsinline
         preload="metadata"
-        poster="assets/images/hero-poster.jpg"
+        poster="assets/images/kick-poster.jpg"
         aria-hidden="true"
       >
-        <source src="assets/videos/wholebody-balance.mp4" type="video/mp4" />
+        <source src="assets/videos/wholebody-kick.mp4" type="video/mp4" />
       </video>
       <div class="hero__shade" aria-hidden="true"></div>
       <div class="hero__grid" aria-hidden="true"></div>
 
       <div class="hero__content page-shell">
-        <p class="eyebrow reveal">SONIC × UNITREE G1</p>
+        <p class="eyebrow institute-title reveal" lang="zh-CN">
+          浙江大学湖州研究院智能跨域机器人研究中心
+        </p>
         <h1 class="reveal">
           Humanoid<br />
           <span>teleoperation.</span>
         </h1>
         <p class="hero__lede reveal">
-          From human motion to coordinated robot behavior — through immersive VR
-          control and full-body tracking.
+          Full-body teleoperation on G1 — from tracked human motion to
+          coordinated robot behavior.
         </p>
       </div>
 
@@ -65,59 +70,20 @@
     <main>
       <section class="overview page-shell" aria-labelledby="overview-title">
         <div class="section-intro reveal">
-          <p class="eyebrow eyebrow--dark">TWO CONTROL MODES</p>
-          <h2 id="overview-title">One robot. Two ways to move.</h2>
+          <p class="eyebrow eyebrow--dark">FULL-BODY TELEOPERATION</p>
+          <h2 id="overview-title">Human motion. Whole-robot control.</h2>
           <p>
-            A unified SONIC control stack translates compact VR input or tracked
-            human motion into responsive whole-body behavior on G1.
+            Tracked human motion becomes responsive, coordinated whole-body
+            behavior on G1 — from balance and reaching to stepping and dynamic
+            leg motion.
           </p>
         </div>
 
         <div class="modes">
-          <article class="mode-card mode-card--vr reveal">
+          <article class="mode-card mode-card--wholebody reveal">
             <div class="mode-card__number">01</div>
             <div class="mode-card__heading">
-              <p class="mode-card__type">HEADSET + TWO CONTROLLERS</p>
-              <h3>3PT VR</h3>
-              <p>
-                Three-point tracking captures head and hand intent for immersive
-                upper-body control, while SONIC maintains coordinated locomotion.
-              </p>
-            </div>
-
-            <figure class="three-point-demo">
-              <div class="three-point-demo__visual">
-                <div class="three-point-demo__grid" aria-hidden="true"></div>
-                <p class="three-point-demo__signal" aria-hidden="true">
-                  <span></span> LIVE SYSTEM DEMO
-                </p>
-                <video
-                  class="three-point-demo__video lazy-video"
-                  controls
-                  muted
-                  loop
-                  playsinline
-                  preload="none"
-                  poster="assets/images/3pt-poster.jpg"
-                  aria-label="3-point VR teleoperation demonstration"
-                >
-                  <source data-src="assets/videos/3pt-demo.mp4" type="video/mp4" />
-                </video>
-                <p class="three-point-demo__input" aria-hidden="true">
-                  HEAD&nbsp;&nbsp;·&nbsp;&nbsp;LEFT HAND&nbsp;&nbsp;·&nbsp;&nbsp;RIGHT HAND
-                </p>
-              </div>
-              <figcaption>
-                <span>3-Point VR Control</span>
-                <small>HEAD + HANDS</small>
-              </figcaption>
-            </figure>
-          </article>
-
-          <article class="mode-card mode-card--wholebody reveal">
-            <div class="mode-card__number">02</div>
-            <div class="mode-card__heading">
-              <p class="mode-card__type">VR + ANKLE TRACKERS</p>
+              <p class="mode-card__type">HEADSET + TWO CONTROLLERS + ANKLE TRACKERS</p>
               <h3>Full-Body Teleoperation</h3>
               <p>
                 Head, hands, and feet drive expressive full-body references for
@@ -186,13 +152,54 @@
               </div>
             </div>
           </article>
+
+          <article class="mode-card mode-card--vr reveal">
+            <div class="mode-card__number">02</div>
+            <div class="mode-card__heading">
+              <p class="mode-card__type">HEADSET + TWO CONTROLLERS · NO ANKLE TRACKERS</p>
+              <h3>Take off the ankle trackers. Keep teleoperating.</h3>
+              <p>
+                With 3PT VR, head and hand intent drives immersive upper-body
+                control while the robot maintains coordinated locomotion —
+                using only a headset and two controllers.
+              </p>
+            </div>
+
+            <figure class="three-point-demo">
+              <div class="three-point-demo__visual">
+                <div class="three-point-demo__grid" aria-hidden="true"></div>
+                <p class="three-point-demo__signal" aria-hidden="true">
+                  <span></span> LIVE SYSTEM DEMO
+                </p>
+                <video
+                  class="three-point-demo__video lazy-video"
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  poster="assets/images/3pt-poster.jpg"
+                  aria-label="3-point VR teleoperation without ankle trackers"
+                >
+                  <source data-src="assets/videos/3pt-demo.mp4" type="video/mp4" />
+                </video>
+                <p class="three-point-demo__input" aria-hidden="true">
+                  HEAD&nbsp;&nbsp;·&nbsp;&nbsp;LEFT HAND&nbsp;&nbsp;·&nbsp;&nbsp;RIGHT HAND
+                </p>
+              </div>
+              <figcaption>
+                <span>3-Point VR Control</span>
+                <small>NO ANKLE TRACKERS</small>
+              </figcaption>
+            </figure>
+          </article>
         </div>
       </section>
     </main>
 
     <footer>
       <div class="page-shell footer__inner">
-        <p>SONIC × G1</p>
+        <p lang="zh-CN">浙江大学湖州研究院智能跨域机器人研究中心</p>
         <p>Humanoid Teleoperation Research</p>
         <p>© 2026</p>
       </div>

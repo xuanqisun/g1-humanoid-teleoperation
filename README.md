@@ -1,9 +1,10 @@
-# SONIC × G1 Teleoperation
+# G1 Humanoid Teleoperation
 
-Static GitHub Pages site presenting two humanoid teleoperation modes:
+Static GitHub Pages site for 浙江大学湖州研究院智能跨域机器人研究中心,
+presenting full-body humanoid teleoperation:
 
-- 3PT VR teleoperation
 - Full-body teleoperation with ankle trackers
+- 3PT VR teleoperation without ankle trackers
 
 ## Preview locally
 
