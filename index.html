@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07110f" />
+    <meta
+      name="description"
+      content="SONIC humanoid teleoperation on Unitree G1: 3-point VR control and full-body motion tracking."
+    />
+
+    <meta property="og:title" content="SONIC × G1 — Humanoid Teleoperation" />
+    <meta
+      property="og:description"
+      content="Immersive 3-point VR control and full-body motion tracking for a humanoid robot."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://xuanqisun.github.io/sonic-g1-teleop-page/assets/images/hero-poster.jpg"
+    />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+
+    <title>SONIC × G1 — Humanoid Teleoperation</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="hero">
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="assets/images/hero-poster.jpg"
+        aria-hidden="true"
+      >
+        <source src="assets/videos/wholebody-balance.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="hero__content page-shell">
+        <p class="eyebrow reveal">SONIC × UNITREE G1</p>
+        <h1 class="reveal">
+          Humanoid<br />
+          <span>teleoperation.</span>
+        </h1>
+        <p class="hero__lede reveal">
+          From human motion to coordinated robot behavior — through immersive VR
+          control and full-body tracking.
+        </p>
+      </div>
+
+      <div class="hero__foot page-shell reveal" aria-hidden="true">
+        <span>RESEARCH PREVIEW · 2026</span>
+        <span class="hero__scroll"><i></i> EXPLORE</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="overview page-shell" aria-labelledby="overview-title">
+        <div class="section-intro reveal">
+          <p class="eyebrow eyebrow--dark">TWO CONTROL MODES</p>
+          <h2 id="overview-title">One robot. Two ways to move.</h2>
+          <p>
+            A unified SONIC control stack translates compact VR input or tracked
+            human motion into responsive whole-body behavior on G1.
+          </p>
+        </div>
+
+        <div class="modes">
+          <article class="mode-card mode-card--vr reveal">
+            <div class="mode-card__number">01</div>
+            <div class="mode-card__heading">
+              <p class="mode-card__type">HEADSET + TWO CONTROLLERS</p>
+              <h3>3PT VR</h3>
+              <p>
+                Three-point tracking captures head and hand intent for immersive
+                upper-body control, while SONIC maintains coordinated locomotion.
+              </p>
+            </div>
+
+            <figure class="three-point-demo">
+              <div class="three-point-demo__visual">
+                <div class="three-point-demo__grid" aria-hidden="true"></div>
+                <p class="three-point-demo__signal" aria-hidden="true">
+                  <span></span> LIVE SYSTEM DEMO
+                </p>
+                <video
+                  class="three-point-demo__video lazy-video"
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  poster="assets/images/3pt-poster.jpg"
+                  aria-label="3-point VR teleoperation demonstration"
+                >
+                  <source data-src="assets/videos/3pt-demo.mp4" type="video/mp4" />
+                </video>
+                <p class="three-point-demo__input" aria-hidden="true">
+                  HEAD&nbsp;&nbsp;·&nbsp;&nbsp;LEFT HAND&nbsp;&nbsp;·&nbsp;&nbsp;RIGHT HAND
+                </p>
+              </div>
+              <figcaption>
+                <span>3-Point VR Control</span>
+                <small>HEAD + HANDS</small>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="mode-card mode-card--wholebody reveal">
+            <div class="mode-card__number">02</div>
+            <div class="mode-card__heading">
+              <p class="mode-card__type">VR + ANKLE TRACKERS</p>
+              <h3>Full-Body Teleoperation</h3>
+              <p>
+                Head, hands, and feet drive expressive full-body references for
+                balancing, reaching, stepping, and other coordinated motions.
+              </p>
+            </div>
+
+            <div class="video-stack">
+              <figure class="demo demo--featured">
+                <video
+                  class="demo__video lazy-video"
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  poster="assets/images/balance-poster.jpg"
+                  aria-label="Full-body teleoperation single-leg balance demonstration"
+                >
+                  <source data-src="assets/videos/wholebody-balance.mp4" type="video/mp4" />
+                </video>
+                <figcaption>
+                  <span>Single-Leg Balance</span>
+                  <small>COORDINATED BALANCE</small>
+                </figcaption>
+              </figure>
+
+              <div class="video-pair">
+                <figure class="demo">
+                  <video
+                    class="demo__video lazy-video"
+                    controls
+                    muted
+                    loop
+                    playsinline
+                    preload="none"
+                    poster="assets/images/pick-poster.jpg"
+                    aria-label="Full-body teleoperation reaching and picking demonstration"
+                  >
+                    <source data-src="assets/videos/wholebody-pick.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>
+                    <span>Reach & Pick</span>
+                    <small>LOW-POSE CONTROL</small>
+                  </figcaption>
+                </figure>
+
+                <figure class="demo">
+                  <video
+                    class="demo__video lazy-video"
+                    controls
+                    muted
+                    loop
+                    playsinline
+                    preload="none"
+                    poster="assets/images/kick-poster.jpg"
+                    aria-label="Full-body teleoperation leg motion demonstration"
+                  >
+                    <source data-src="assets/videos/wholebody-kick.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption>
+                    <span>Dynamic Leg Motion</span>
+                    <small>LOWER-BODY TRACKING</small>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="page-shell footer__inner">
+        <p>SONIC × G1</p>
+        <p>Humanoid Teleoperation Research</p>
+        <p>© 2026</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
