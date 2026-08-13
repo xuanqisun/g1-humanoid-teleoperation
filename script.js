@@ -3,7 +3,8 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matc
 const translations = {
   en: {
     "language.label": "Language",
-    "brand.name": "Hangzhou Intelligent Cross-Domain Robotics Research Center · Dr. Li Xiaowen's Team",
+    "language.selector": "LANGUAGE",
+    "brand.name": "Center for Artificial Intelligence and Cross-Domain Robotics (AI-CDR Center)",
     "hero.titlePrimary": "Humanoid",
     "hero.titleSecondary": "teleoperation.",
     "hero.lede": "Full-body teleoperation on G1 — from tracked human motion to coordinated robot behavior.",
@@ -49,7 +50,8 @@ const translations = {
   },
   zh: {
     "language.label": "语言",
-    "brand.name": "杭州智能跨域机器人研究中心 Dr.李晓文团队",
+    "language.selector": "语言",
+    "brand.name": "Center for Artificial Intelligence and Cross-Domain Robotics (AI-CDR Center)",
     "hero.titlePrimary": "人形机器人",
     "hero.titleSecondary": "遥操作。",
     "hero.lede": "在 G1 上实现全身遥操作——将人体动作转化为协调的机器人行为。",
@@ -102,8 +104,8 @@ const applyLanguage = (language) => {
 
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
   document.title = language === "zh"
-    ? "杭州智能跨域机器人研究中心 Dr.李晓文团队 — 人形机器人遥操作"
-    : "Hangzhou Intelligent Cross-Domain Robotics Research Center — Humanoid Teleoperation";
+    ? "Center for Artificial Intelligence and Cross-Domain Robotics (AI-CDR Center) — 人形机器人遥操作"
+    : "Center for Artificial Intelligence and Cross-Domain Robotics (AI-CDR Center) — Humanoid Teleoperation";
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const value = copy[element.dataset.i18n];
