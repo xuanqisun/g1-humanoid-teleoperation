@@ -1,6 +1,6 @@
 # G1 Humanoid Teleoperation
 
-Static GitHub Pages site for 浙江大学湖州研究院智能跨域机器人研究中心,
+Static GitHub Pages site for 杭州智能跨域机器人研究中心 Dr李晓文团队,
 presenting full-body humanoid teleoperation:
 
 - Full-body teleoperation with ankle trackers
