@@ -409,6 +409,10 @@ video {
   vertical-align: 0.1em;
 }
 
+.camera-title__lead:empty {
+  display: none;
+}
+
 .camera-title strong {
   position: relative;
   display: inline-block;

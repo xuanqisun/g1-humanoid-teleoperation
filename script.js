@@ -84,7 +84,7 @@ const translations = {
     "vr.playAria": "播放 3PT VR 遥操视频",
     "camera.type": "单摄像头 · 零穿戴",
     "camera.takeOff": "告别所有穿戴",
-    "camera.lead": "全身遥操，",
+    "camera.lead": "",
     "camera.focus": "只要一台摄像头",
     "camera.description": "无需头显、手柄和追踪器。站在镜头前，人的动作便会映射为机器人的全身运动。",
     "camera.input": "人体动作",
@@ -109,7 +109,7 @@ const applyLanguage = (language) => {
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const value = copy[element.dataset.i18n];
-    if (value) element.textContent = value;
+    if (value !== undefined) element.textContent = value;
   });
 
   document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
