@@ -104,8 +104,8 @@ const applyLanguage = (language) => {
 
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
   document.title = language === "zh"
-    ? "Center for Artificial Intelligence and Cross-Domain Robotics (AI-CDR Center) — 人形机器人遥操作"
-    : "Center for Artificial Intelligence and Cross-Domain Robotics (AI-CDR Center) — Humanoid Teleoperation";
+    ? "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China — 人形机器人遥操作"
+    : "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China — Humanoid Teleoperation";
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const value = copy[element.dataset.i18n];
