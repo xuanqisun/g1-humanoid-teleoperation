@@ -27,7 +27,7 @@
 
     <title>Center for Artificial Intelligence and Cross-Domain Robotics (AI-CDR Center) — Humanoid Teleoperation</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260814-1" />
+    <link rel="stylesheet" href="styles.css?v=20260814-2" />
   </head>
 
   <body>
@@ -76,16 +76,27 @@
     <main>
       <section class="overview page-shell" aria-labelledby="overview-title">
         <div class="section-intro reveal">
-          <p class="eyebrow eyebrow--dark" data-i18n="overview.kicker">FULL-BODY TELEOPERATION</p>
-          <h2 id="overview-title">
-            <span class="section-intro__minor" data-i18n="overview.minor">Human motion.</span>
-            <span class="section-intro__major" data-i18n="overview.major">Whole-robot control.</span>
-          </h2>
-          <p data-i18n="overview.description">
-            Tracked human motion becomes responsive, coordinated whole-body
-            behavior on G1 — from balance and reaching to stepping and dynamic
-            leg motion.
-          </p>
+          <div class="section-intro__copy">
+            <p class="eyebrow eyebrow--dark" data-i18n="overview.kicker">FULL-BODY TELEOPERATION</p>
+            <h2 id="overview-title">
+              <span class="section-intro__minor" data-i18n="overview.minor">Human motion.</span>
+              <span class="section-intro__major" data-i18n="overview.major">Whole-robot control.</span>
+            </h2>
+            <p data-i18n="overview.description">
+              Tracked human motion becomes responsive, coordinated whole-body
+              behavior on G1 — from balance and reaching to stepping and dynamic
+              leg motion.
+            </p>
+          </div>
+
+          <div class="overview-robot" aria-hidden="true">
+            <span class="overview-robot__orbit overview-robot__orbit--outer"></span>
+            <span class="overview-robot__orbit overview-robot__orbit--inner"></span>
+            <span class="overview-robot__scan"></span>
+            <img src="assets/images/g1-cutout.png" alt="" loading="lazy" decoding="async" />
+            <span class="overview-robot__node overview-robot__node--top"></span>
+            <span class="overview-robot__node overview-robot__node--side"></span>
+          </div>
         </div>
 
         <div class="modes">
