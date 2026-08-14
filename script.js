@@ -54,7 +54,7 @@ const translations = {
     "brand.name": "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China",
     "hero.titlePrimary": "人形机器人",
     "hero.titleSecondary": "全身遥操",
-    "hero.lede": "人有所动，G1 有所应。“如身之使臂，臂之使指，莫不制从。”——《汉书·贾谊传》",
+    "hero.lede": "人有所动，G1 有所应。\n“如身之使臂，臂之使指，莫不制从。”——《汉书·贾谊传》",
     "hero.preview": "研究展示 · 2026",
     "hero.explore": "继续探索",
     "overview.kicker": "全身遥操",

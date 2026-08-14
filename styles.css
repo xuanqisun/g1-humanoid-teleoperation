@@ -179,6 +179,7 @@ video {
   color: rgba(238, 242, 235, 0.84);
   font-size: clamp(17px, 1.55vw, 23px);
   line-height: 1.55;
+  white-space: pre-line;
 }
 
 .hero__foot {
