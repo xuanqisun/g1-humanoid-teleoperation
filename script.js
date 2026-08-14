@@ -60,7 +60,7 @@ const translations = {
     "overview.kicker": "全身遥操",
     "overview.minor": "你怎么动",
     "overview.major": "G1 就怎么动",
-    "overview.description": "抬手、俯身、迈步、踢腿，你的动作自然延伸到 G1。每一次响应都连贯流畅，让遥操更像亲自在场",
+    "overview.description": "从抬手、俯身到迈步、踢腿，G1 全程自然跟随。意之所至，身之所往。",
     "full.type": "头显 · 双手柄 · 脚环",
     "full.title": "全身随动，所动即所得",
     "full.description": "从抬手、俯身到迈步，G1 自然跟随你的身体节奏。平衡、抓取与移动一气呵成",
