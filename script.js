@@ -4,7 +4,7 @@ const translations = {
   en: {
     "language.label": "Language",
     "language.selector": "LANGUAGE",
-    "brand.name": "Center for Artificial Intelligence and Cross-Domain Robotics (AI-CDR Center)",
+    "brand.name": "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics）",
     "hero.titlePrimary": "Humanoid",
     "hero.titleSecondary": "teleoperation.",
     "hero.lede": "Full-body teleoperation on G1 — from tracked human motion to coordinated robot behavior.",
@@ -51,10 +51,10 @@ const translations = {
   zh: {
     "language.label": "语言",
     "language.selector": "语言",
-    "brand.name": "Center for Artificial Intelligence and Cross-Domain Robotics (AI-CDR Center)",
+    "brand.name": "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics）",
     "hero.titlePrimary": "人形机器人",
     "hero.titleSecondary": "全身遥操",
-    "hero.lede": "人的动作，机器人的回应。让 G1 实时复现自然、协调的全身运动。",
+    "hero.lede": "人有所动，机有所应；举手投足，如臂使指",
     "hero.preview": "研究展示 · 2026",
     "hero.explore": "继续探索",
     "overview.kicker": "全身遥操",
