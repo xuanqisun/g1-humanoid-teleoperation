@@ -802,6 +802,20 @@ html[lang="zh-CN"] .camera-title__lead {
   box-shadow: 0 35px 100px rgba(0, 0, 0, 0.28);
 }
 
+.camera-demo--simulation {
+  margin-top: clamp(24px, 3vw, 40px);
+}
+
+.camera-demo--simulation .camera-demo__visual::after,
+.camera-demo--simulation .camera-demo__scan {
+  display: none;
+}
+
+.camera-demo--simulation .camera-demo__video {
+  aspect-ratio: 1920 / 950;
+  object-fit: contain;
+}
+
 .camera-demo__visual {
   position: relative;
   display: grid;

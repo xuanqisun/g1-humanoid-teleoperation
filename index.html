@@ -27,7 +27,7 @@
 
     <title>AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China — Humanoid Teleoperation</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260814-5" />
+    <link rel="stylesheet" href="styles.css?v=20260814-6" />
   </head>
 
   <body>
@@ -273,6 +273,42 @@
                 <small data-i18n="camera.captionMeta">ONE CAMERA · ZERO WEARABLES</small>
               </figcaption>
             </figure>
+
+            <figure class="camera-demo camera-demo--simulation">
+              <div class="camera-demo__visual">
+                <p class="camera-demo__signal camera-demo__signal--input" aria-hidden="true">
+                  <span></span> <b data-i18n="camera.simInput">CAMERA MOTION</b>
+                </p>
+                <p class="camera-demo__signal camera-demo__signal--output" aria-hidden="true">
+                  <b data-i18n="camera.simOutput">SIMULATION RESPONSE</b> <span></span>
+                </p>
+                <video
+                  class="camera-demo__video lazy-video"
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  poster="assets/images/camera-simulation-poster.jpg"
+                  data-i18n-aria-label="camera.simVideoAria"
+                  aria-label="Camera-to-simulation teleoperation demonstration"
+                >
+                  <source data-src="assets/videos/camera-teleop-simulation.mp4" type="video/mp4" />
+                </video>
+                <button
+                  class="three-point-demo__play camera-demo__play media-play"
+                  type="button"
+                  data-i18n-aria-label="camera.simPlayAria"
+                  aria-label="Play camera-to-simulation teleoperation video"
+                >
+                  <span aria-hidden="true"></span>
+                </button>
+              </div>
+              <figcaption>
+                <span data-i18n="camera.simCaption">Camera-to-Simulation</span>
+                <small data-i18n="camera.simCaptionMeta">LIVE MOTION · SIMULATION RESPONSE</small>
+              </figcaption>
+            </figure>
           </article>
         </div>
       </section>
@@ -286,6 +322,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260814-11"></script>
+    <script src="script.js?v=20260814-12"></script>
   </body>
 </html>

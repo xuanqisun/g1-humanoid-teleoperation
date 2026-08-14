@@ -45,6 +45,12 @@ const translations = {
     "camera.captionMeta": "ONE CAMERA · ZERO WEARABLES",
     "camera.videoAria": "Single-camera whole-body teleoperation demonstration",
     "camera.playAria": "Play single-camera teleoperation video",
+    "camera.simInput": "CAMERA MOTION",
+    "camera.simOutput": "SIMULATION RESPONSE",
+    "camera.simCaption": "Camera-to-Simulation",
+    "camera.simCaptionMeta": "LIVE MOTION · SIMULATION RESPONSE",
+    "camera.simVideoAria": "Camera-to-simulation teleoperation demonstration",
+    "camera.simPlayAria": "Play camera-to-simulation teleoperation video",
     "footer.research": "Humanoid Teleoperation Research"
   },
   zh: {
@@ -91,6 +97,12 @@ const translations = {
     "camera.captionMeta": "一台摄像头 · 零穿戴",
     "camera.videoAria": "单摄像头全身遥操演示",
     "camera.playAria": "播放单摄像头遥操视频",
+    "camera.simInput": "摄像头动作",
+    "camera.simOutput": "仿真响应",
+    "camera.simCaption": "摄像头到仿真",
+    "camera.simCaptionMeta": "实时动作 · 仿真响应",
+    "camera.simVideoAria": "摄像头驱动仿真机器人演示",
+    "camera.simPlayAria": "播放摄像头到仿真遥操视频",
     "footer.research": "人形机器人遥操研究"
   }
 };
