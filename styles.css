@@ -246,7 +246,7 @@ video {
 .section-intro {
   display: grid;
   max-width: none;
-  grid-template-columns: minmax(0, 1.32fr) minmax(320px, 0.78fr);
+  grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.32fr);
   gap: clamp(24px, 4vw, 70px);
   align-items: center;
   margin-bottom: clamp(100px, 11vw, 160px);
@@ -255,6 +255,8 @@ video {
 .section-intro__copy {
   position: relative;
   z-index: 2;
+  grid-column: 2;
+  grid-row: 1;
   max-width: 820px;
 }
 
@@ -297,6 +299,8 @@ video {
 
 .overview-robot {
   position: relative;
+  grid-column: 1;
+  grid-row: 1;
   min-height: clamp(470px, 44vw, 650px);
   overflow: hidden;
   isolation: isolate;
@@ -1018,7 +1022,7 @@ footer {
   :root { --shell: min(100% - 46px, 980px); }
 
   .section-intro {
-    grid-template-columns: minmax(0, 1.16fr) minmax(290px, 0.84fr);
+    grid-template-columns: minmax(290px, 0.84fr) minmax(0, 1.16fr);
   }
 
   .overview-robot {
