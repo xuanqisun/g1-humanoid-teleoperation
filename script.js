@@ -86,7 +86,7 @@ const translations = {
     "camera.takeOff": "0 穿戴",
     "camera.lead": "",
     "camera.focus": "有摄像头就能遥操",
-    "camera.description": "往镜头前一站，就是兵。遥操从此轻装上阵",
+    "camera.description": "‘往那儿一站就是兵’，遥操从此轻装上阵",
     "camera.input": "人体动作",
     "camera.output": "机器人响应",
     "camera.caption": "单摄像头遥操",
