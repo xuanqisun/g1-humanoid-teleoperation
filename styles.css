@@ -580,35 +580,15 @@ video {
 }
 
 .camera-title strong {
-  position: relative;
-  display: inline-block;
-  padding-inline: 0.07em;
-  color: var(--signal);
+  display: inline;
+  color: inherit;
   font-weight: inherit;
-  text-shadow: 0 0 25px rgba(198, 255, 73, 0.2);
+  text-shadow: none;
 }
 
-.camera-title strong::before {
-  position: absolute;
-  inset: 0.06em -0.01em 0;
-  border-right: 1px solid rgba(198, 255, 73, 0.5);
-  border-left: 1px solid rgba(198, 255, 73, 0.5);
-  content: "";
-  pointer-events: none;
-}
-
+.camera-title strong::before,
 .camera-title strong::after {
-  position: absolute;
-  right: 0;
-  bottom: -0.08em;
-  left: 0;
-  height: 2px;
-  content: "";
-  background: linear-gradient(90deg, transparent, var(--signal) 20%, var(--aqua) 80%, transparent);
-  background-size: 180% 100%;
-  box-shadow: 0 0 14px rgba(198, 255, 73, 0.6);
-  animation: camera-title-signal 2.8s ease-in-out infinite;
-  pointer-events: none;
+  display: none;
 }
 
 html[lang="zh-CN"] .hero h1 {
@@ -639,11 +619,6 @@ html[lang="zh-CN"] .mode-card h3 {
 html[lang="zh-CN"] .camera-title__lead {
   font-size: 0.58em;
   letter-spacing: -0.015em;
-}
-
-@keyframes camera-title-signal {
-  0%, 100% { background-position: 100% 0; opacity: 0.48; }
-  50% { background-position: -80% 0; opacity: 1; }
 }
 
 .three-point-demo {
@@ -802,20 +777,6 @@ html[lang="zh-CN"] .camera-title__lead {
   box-shadow: 0 35px 100px rgba(0, 0, 0, 0.28);
 }
 
-.camera-demo--simulation {
-  margin-top: clamp(24px, 3vw, 40px);
-}
-
-.camera-demo--simulation .camera-demo__visual::after,
-.camera-demo--simulation .camera-demo__scan {
-  display: none;
-}
-
-.camera-demo--simulation .camera-demo__video {
-  aspect-ratio: 1920 / 950;
-  object-fit: contain;
-}
-
 .camera-demo__visual {
   position: relative;
   display: grid;
@@ -927,6 +888,70 @@ html[lang="zh-CN"] .camera-title__lead {
   font-size: 8px;
   letter-spacing: 0.12em;
 }
+
+.mode-card--music .mode-card__heading {
+  margin-left: clamp(0px, 7vw, 104px);
+}
+
+.music-title > span,
+.music-title strong {
+  display: block;
+}
+
+.music-title strong {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.music-demo__visual::after {
+  display: none;
+}
+
+.music-demo__video {
+  aspect-ratio: 1440 / 952;
+  object-fit: contain;
+}
+
+.music-demo__signal {
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  left: 18px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+  padding: 8px 10px;
+  color: rgba(238, 242, 235, 0.72);
+  background: rgba(7, 17, 15, 0.72);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  pointer-events: none;
+}
+
+.music-demo__signal b {
+  font: inherit;
+}
+
+.music-demo__bars {
+  display: flex;
+  gap: 2px;
+  height: 10px;
+  align-items: end;
+}
+
+.music-demo__bars i {
+  display: block;
+  width: 2px;
+  background: var(--aqua);
+}
+
+.music-demo__bars i:nth-child(1) { height: 4px; }
+.music-demo__bars i:nth-child(2) { height: 9px; }
+.music-demo__bars i:nth-child(3) { height: 6px; }
+.music-demo__bars i:nth-child(4) { height: 10px; }
 
 .video-stack {
   padding: 0;
@@ -1141,6 +1166,12 @@ footer {
     line-height: 1.12;
   }
 
+  html[lang="zh-CN"] .music-title > span {
+    margin-bottom: 0.08em;
+    font-size: 0.86em;
+    line-height: 1.2;
+  }
+
   .mode-card__number {
     top: 25px;
     right: 24px;
@@ -1177,6 +1208,10 @@ footer {
     object-fit: contain;
   }
 
+  .music-demo__video {
+    aspect-ratio: 1440 / 952;
+  }
+
   .camera-demo__signal {
     top: 10px;
     padding: 6px 7px;
@@ -1185,6 +1220,13 @@ footer {
 
   .camera-demo__signal--input { left: 10px; }
   .camera-demo__signal--output { right: 10px; }
+
+  .music-demo__signal {
+    top: 10px;
+    left: 10px;
+    padding: 6px 7px;
+    font-size: 7px;
+  }
 
   .camera-demo figcaption {
     align-items: flex-start;
@@ -1207,7 +1249,6 @@ footer {
   html { scroll-behavior: auto; }
   .hero__scroll i::after,
   .reveal { opacity: 1; transform: none; transition: none; }
-  .camera-title strong::after,
   .camera-demo__scan,
   .overview-robot::before,
   .overview-robot img,
