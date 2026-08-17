@@ -893,7 +893,6 @@ html[lang="zh-CN"] .camera-title__lead {
   margin-left: clamp(0px, 7vw, 104px);
 }
 
-.music-title > span,
 .music-title strong {
   display: block;
 }
@@ -1164,12 +1163,6 @@ footer {
   html[lang="zh-CN"] .mode-card h3 {
     font-size: 38px;
     line-height: 1.12;
-  }
-
-  html[lang="zh-CN"] .music-title > span {
-    margin-bottom: 0.08em;
-    font-size: 0.86em;
-    line-height: 1.2;
   }
 
   .mode-card__number {
