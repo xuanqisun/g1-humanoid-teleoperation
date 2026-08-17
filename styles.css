@@ -889,6 +889,127 @@ html[lang="zh-CN"] .camera-title__lead {
   letter-spacing: 0.12em;
 }
 
+.dance-title > span,
+.dance-title strong {
+  display: block;
+}
+
+.dance-title > span {
+  max-width: 860px;
+  margin-bottom: 0.38em;
+  color: rgba(238, 242, 235, 0.72);
+  font-size: 0.48em;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+
+.dance-title strong {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.dance-demo__stage {
+  position: relative;
+  display: grid;
+  min-height: 820px;
+  padding: 82px 40px 40px;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 52%, rgba(105, 232, 207, 0.13), transparent 42%),
+    linear-gradient(rgba(105, 232, 207, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(105, 232, 207, 0.045) 1px, transparent 1px),
+    #07110f;
+  background-size: auto, 48px 48px, 48px 48px, auto;
+}
+
+.dance-demo__stage::after {
+  position: absolute;
+  top: 76px;
+  bottom: 34px;
+  left: 50%;
+  width: min(54%, 520px);
+  border: 1px solid rgba(105, 232, 207, 0.12);
+  content: "";
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.dance-demo__flow {
+  position: absolute;
+  z-index: 3;
+  top: 22px;
+  right: 24px;
+  left: 24px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: rgba(238, 242, 235, 0.64);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  pointer-events: none;
+}
+
+.dance-demo__flow span {
+  padding: 8px 10px;
+  background: rgba(7, 17, 15, 0.78);
+  white-space: nowrap;
+}
+
+.dance-demo__flow i {
+  position: relative;
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, rgba(105, 232, 207, 0.12), var(--aqua));
+}
+
+.dance-demo__flow i::after {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid var(--aqua);
+  border-right: 1px solid var(--aqua);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.dance-demo__frame {
+  position: relative;
+  z-index: 2;
+  width: min(46%, 440px);
+  overflow: hidden;
+  border: 1px solid rgba(238, 242, 235, 0.2);
+  background: #050807;
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.48);
+}
+
+.dance-demo__video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: #050807;
+}
+
+.dance-demo__play {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dance-demo__play:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.dance-demo__play.is-hidden {
+  transform: translate(-50%, -50%) scale(0.85);
+}
+
 .mode-card--music .mode-card__heading {
   margin-left: clamp(0px, 7vw, 104px);
 }
@@ -1165,6 +1286,11 @@ footer {
     line-height: 1.12;
   }
 
+  html[lang="zh-CN"] .mode-card--dance h3 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
   .mode-card__number {
     top: 25px;
     right: 24px;
@@ -1219,6 +1345,40 @@ footer {
     left: 10px;
     padding: 6px 7px;
     font-size: 7px;
+  }
+
+  .dance-title > span {
+    margin-bottom: 0.5em;
+    font-size: 0.55em;
+    line-height: 1.35;
+  }
+
+  .dance-demo__stage {
+    min-height: 0;
+    padding: 68px 18px 24px;
+    background-size: auto, 34px 34px, 34px 34px, auto;
+  }
+
+  .dance-demo__stage::after {
+    top: 62px;
+    bottom: 18px;
+    width: calc(100% - 24px);
+  }
+
+  .dance-demo__flow {
+    top: 14px;
+    right: 12px;
+    left: 12px;
+    gap: 8px;
+    font-size: 7px;
+  }
+
+  .dance-demo__flow span {
+    padding: 6px 7px;
+  }
+
+  .dance-demo__frame {
+    width: min(100%, 340px);
   }
 
   .camera-demo figcaption {

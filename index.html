@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#07110f" />
     <meta
       name="description"
-      content="Full-body humanoid teleoperation on Unitree G1, from wearable and single-camera control to music-driven motion, by the AI-CDR Center."
+      content="Full-body humanoid teleoperation on Unitree G1, from wearable and single-camera control to dance-video and music-driven motion, by the AI-CDR Center."
     />
 
     <meta
@@ -15,7 +15,7 @@
     />
     <meta
       property="og:description"
-      content="Move G1 with your whole body, with two controllers, one camera, or just music."
+      content="Move G1 with your whole body, with two controllers, one camera, a dance video, or just music."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -27,7 +27,7 @@
 
     <title>AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China — Humanoid Teleoperation</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260817-2" />
+    <link rel="stylesheet" href="styles.css?v=20260817-3" />
   </head>
 
   <body>
@@ -273,11 +273,61 @@
                 <small data-i18n="camera.captionMeta">ONE CAMERA · ZERO WEARABLES</small>
               </figcaption>
             </figure>
+          </article>
 
+          <article id="dance-video-motion" class="mode-card mode-card--dance reveal">
+            <div class="mode-card__number">04</div>
+            <div class="mode-card__heading">
+              <p class="mode-card__type" data-i18n="dance.type">DANCE VIDEO · MOTION RECREATION</p>
+              <h3 class="dance-title">
+                <span data-i18n="dance.question">A dance you can't forget?</span>
+                <strong data-i18n="dance.focus">Let G1 bring it back</strong>
+              </h3>
+              <p data-i18n="dance.description">
+                One video preserves every turn and every beat, bringing the
+                movement back to life through G1.
+              </p>
+            </div>
+
+            <figure class="camera-demo dance-demo">
+              <div class="dance-demo__stage">
+                <div class="dance-demo__flow" aria-hidden="true">
+                  <span data-i18n="dance.input">DANCE VIDEO</span>
+                  <i></i>
+                  <span data-i18n="dance.output">G1 MOTION</span>
+                </div>
+                <div class="dance-demo__frame">
+                  <video
+                    class="dance-demo__video lazy-video"
+                    controls
+                    loop
+                    playsinline
+                    preload="none"
+                    poster="assets/images/dance-video-motion-poster.jpg"
+                    data-i18n-aria-label="dance.videoAria"
+                    aria-label="G1 recreating motion from a dance video"
+                  >
+                    <source data-src="assets/videos/dance-video-motion.mp4" type="video/mp4" />
+                  </video>
+                  <button
+                    class="three-point-demo__play dance-demo__play media-play"
+                    type="button"
+                    data-i18n-aria-label="dance.playAria"
+                    aria-label="Play dance-video-driven G1 motion"
+                  >
+                    <span aria-hidden="true"></span>
+                  </button>
+                </div>
+              </div>
+              <figcaption>
+                <span data-i18n="dance.caption">Dance Video to Motion</span>
+                <small data-i18n="dance.captionMeta">VIDEO IN · G1 MOTION OUT</small>
+              </figcaption>
+            </figure>
           </article>
 
           <article id="music-driven-motion" class="mode-card mode-card--music reveal">
-            <div class="mode-card__number">04</div>
+            <div class="mode-card__number">05</div>
             <div class="mode-card__heading">
               <p class="mode-card__type" data-i18n="music.type">MUSIC-DRIVEN · ZERO EQUIPMENT</p>
               <h3 class="music-title">
@@ -334,6 +384,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260817-2"></script>
+    <script src="script.js?v=20260817-3"></script>
   </body>
 </html>
