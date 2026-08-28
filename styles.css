@@ -163,14 +163,14 @@ video {
 html[lang="zh-CN"] .hero__title-primary {
   display: inline-block;
   font-size: 0.84em;
-  letter-spacing: -0.045em;
+  letter-spacing: 0.04em;
   line-height: 1.05;
 }
 
 html[lang="zh-CN"] .hero__title-secondary {
   display: inline-block;
-  font-size: 1.08em;
-  letter-spacing: -0.055em;
+  font-size: 1.16em;
+  letter-spacing: 0.055em;
   line-height: 1;
 }
 
