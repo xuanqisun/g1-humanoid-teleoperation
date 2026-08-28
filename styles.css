@@ -170,7 +170,7 @@ html[lang="zh-CN"] .hero__title-primary {
 html[lang="zh-CN"] .hero__title-secondary {
   display: inline-block;
   font-size: 1.16em;
-  letter-spacing: 0.055em;
+  letter-spacing: 0.015em;
   line-height: 1;
 }
 
