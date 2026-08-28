@@ -818,8 +818,8 @@ html[lang="zh-CN"] .camera-title__lead {
 
 .camera-demo__video {
   width: 100%;
-  aspect-ratio: 32 / 9;
-  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
   background: #07110f;
 }
 
