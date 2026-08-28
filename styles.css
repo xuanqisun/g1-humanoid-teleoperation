@@ -161,9 +161,16 @@ video {
 }
 
 html[lang="fr"] .hero h1 {
-  font-size: clamp(56px, 7.2vw, 110px);
+  font-size: clamp(64px, 8.4vw, 132px);
   letter-spacing: -0.06em;
-  line-height: 0.9;
+  line-height: 0.86;
+}
+
+html[lang="fr"] .hero__title-secondary {
+  display: inline-block;
+  font-size: 0.64em;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
 }
 
 .hero__lede {
@@ -1230,9 +1237,9 @@ footer {
   }
 
   html[lang="fr"] .hero h1 {
-    font-size: clamp(31px, 9vw, 42px);
+    font-size: clamp(40px, 12vw, 54px);
     letter-spacing: -0.045em;
-    line-height: 1.02;
+    line-height: 0.92;
   }
 
   .hero__lede {
