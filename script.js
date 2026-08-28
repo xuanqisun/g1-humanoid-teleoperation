@@ -64,6 +64,69 @@ const translations = {
     "music.playAria": "Play music-driven G1 motion video",
     "footer.research": "Humanoid Teleoperation Research"
   },
+  fr: {
+    "language.label": "Langue",
+    "brand.name": "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou, Chine",
+    "hero.titlePrimary": "Téléopération",
+    "hero.titleSecondary": "humanoïde",
+    "hero.lede": "Bougez librement. À l’unisson.",
+    "hero.preview": "APERÇU DE LA RECHERCHE · 2026",
+    "hero.explore": "DÉCOUVRIR",
+    "overview.kicker": "TÉLÉOPÉRATION CORPS ENTIER",
+    "overview.minor": "Vous bougez",
+    "overview.major": "G1 vous suit",
+    "overview.description": "Levez un bras, penchez-vous, faites un pas ou donnez un coup de pied : G1 suit naturellement chacun de vos mouvements, de la tête aux pieds.",
+    "full.type": "CASQUE · DEUX MANETTES · CAPTEURS AUX CHEVILLES",
+    "full.title": "Bougez naturellement, contrôlez le robot tout entier",
+    "full.description": "Levez un bras, penchez-vous ou faites un pas. G1 suit votre rythme en conjuguant équilibre, portée et mouvement.",
+    "full.balanceTitle": "Équilibre sur une jambe",
+    "full.balanceMeta": "STABLE ET COORDONNÉ",
+    "full.balanceAria": "Démonstration d’équilibre sur une jambe en téléopération corps entier",
+    "full.pickTitle": "Atteindre et saisir",
+    "full.pickMeta": "GESTE NATUREL",
+    "full.pickAria": "Démonstration de préhension en téléopération corps entier",
+    "full.kickTitle": "Coup de pied dynamique",
+    "full.kickMeta": "CONTRÔLE DU BAS DU CORPS",
+    "full.kickAria": "Démonstration du mouvement des jambes en téléopération corps entier",
+    "vr.type": "CASQUE · DEUX MANETTES",
+    "vr.title": "Sans capteurs aux chevilles, allez plus loin",
+    "vr.description": "Enfilez le casque et prenez les deux manettes. Le haut de votre corps pilote G1, tandis que le joystick le fait avancer ou reculer — inutile de marcher avec le robot.",
+    "vr.live": "DÉMO EN DIRECT",
+    "vr.input": "TÊTE · MAIN GAUCHE · MAIN DROITE",
+    "vr.caption": "Commande VR à 3 points",
+    "vr.captionMeta": "SANS CAPTEURS AUX CHEVILLES",
+    "vr.videoAria": "Téléopération VR à 3 points sans capteurs aux chevilles",
+    "vr.playAria": "Lire la vidéo de téléopération VR à 3 points",
+    "camera.type": "UNE CAMÉRA · AUCUN ÉQUIPEMENT À PORTER",
+    "camera.takeOff": "SANS ÉQUIPEMENT",
+    "camera.lead": "",
+    "camera.focus": "une caméra suffit",
+    "camera.description": "Placez-vous devant la caméra : vous êtes prêt à bouger. La téléopération, sans rien porter.",
+    "camera.input": "MOUVEMENT HUMAIN",
+    "camera.output": "RÉPONSE DU G1",
+    "camera.caption": "Téléopération par caméra unique",
+    "camera.captionMeta": "UNE CAMÉRA · AUCUN ÉQUIPEMENT À PORTER",
+    "camera.videoAria": "Démonstration de téléopération corps entier par caméra unique",
+    "camera.playAria": "Lire la vidéo de téléopération par caméra unique",
+    "dance.type": "VIDÉO DE DANSE · REPRODUCTION DU MOUVEMENT",
+    "dance.focus": "Un regard suffit, G1 reproduit la danse",
+    "dance.description": "Une vidéo capture chaque rotation et chaque temps fort pour redonner vie au mouvement avec G1.",
+    "dance.input": "VIDÉO DE DANSE",
+    "dance.output": "MOUVEMENT DU G1",
+    "dance.caption": "De la vidéo de danse au mouvement",
+    "dance.captionMeta": "ENTRÉE VIDÉO · SORTIE MOUVEMENT G1",
+    "dance.videoAria": "G1 reproduisant les mouvements d’une vidéo de danse",
+    "dance.playAria": "Lire la vidéo de G1 reproduisant une chorégraphie",
+    "music.type": "PILOTÉ PAR LA MUSIQUE · AUCUN ÉQUIPEMENT",
+    "music.focus": "Suivez la musique, bougez naturellement",
+    "music.description": "Dès que la musique commence, G1 trouve le rythme — chaque mouvement s’accorde naturellement à la cadence.",
+    "music.signal": "ENTRÉE MUSICALE",
+    "music.caption": "Mouvement guidé par la musique",
+    "music.captionMeta": "ENTRÉE AUDIO · MOUVEMENT CORPS ENTIER",
+    "music.videoAria": "G1 bougeant naturellement au rythme de la musique",
+    "music.playAria": "Lire la vidéo de G1 piloté par la musique",
+    "footer.research": "Recherche sur la téléopération de robots humanoïdes"
+  },
   zh: {
     "language.label": "语言",
     "brand.name": "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China",
@@ -134,10 +197,14 @@ const languageButtons = document.querySelectorAll("[data-language]");
 const applyLanguage = (language) => {
   const copy = translations[language] || translations.en;
 
-  document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+  document.documentElement.lang = language === "zh"
+    ? "zh-CN"
+    : language === "fr" ? "fr" : "en";
   document.title = language === "zh"
     ? "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China — 人形机器人遥操作"
-    : "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China — Humanoid Teleoperation";
+    : language === "fr"
+      ? "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou, Chine — Téléopération de robots humanoïdes"
+      : "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China — Humanoid Teleoperation";
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const value = copy[element.dataset.i18n];
@@ -160,12 +227,18 @@ const applyLanguage = (language) => {
   }
 };
 
+const browserLanguage = navigator.language.toLowerCase();
+const detectedLanguage = browserLanguage.startsWith("zh")
+  ? "zh"
+  : browserLanguage.startsWith("fr") ? "fr" : "en";
 let initialLanguage = "en";
 try {
-  initialLanguage = localStorage.getItem("site-language") ||
-    (navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en");
+  const storedLanguage = localStorage.getItem("site-language");
+  initialLanguage = storedLanguage && translations[storedLanguage]
+    ? storedLanguage
+    : detectedLanguage;
 } catch (error) {
-  initialLanguage = navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
+  initialLanguage = detectedLanguage;
 }
 
 languageButtons.forEach((button) => {
