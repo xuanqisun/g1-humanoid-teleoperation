@@ -160,6 +160,12 @@ video {
   text-shadow: 0 0 36px rgba(105, 232, 207, 0.09);
 }
 
+html[lang="fr"] .hero h1 {
+  font-size: clamp(56px, 7.2vw, 110px);
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+}
+
 .hero__lede {
   max-width: 620px;
   margin: 42px 0 0 4px;
@@ -1221,6 +1227,12 @@ footer {
   html[lang="zh-CN"] .hero h1 {
     font-size: clamp(38px, 11.2vw, 47px);
     line-height: 1.18;
+  }
+
+  html[lang="fr"] .hero h1 {
+    font-size: clamp(31px, 9vw, 42px);
+    letter-spacing: -0.045em;
+    line-height: 1.02;
   }
 
   .hero__lede {
