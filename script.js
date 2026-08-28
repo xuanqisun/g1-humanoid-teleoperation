@@ -6,7 +6,7 @@ const translations = {
     "brand.name": "AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China",
     "hero.titlePrimary": "Humanoid",
     "hero.titleSecondary": "teleoperation",
-    "hero.lede": "You move. G1 responds.",
+    "hero.lede": "Move freely. Move together.",
     "hero.preview": "RESEARCH PREVIEW · 2026",
     "hero.explore": "EXPLORE",
     "overview.kicker": "FULL-BODY TELEOPERATION",
