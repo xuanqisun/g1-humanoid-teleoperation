@@ -160,6 +160,20 @@ video {
   text-shadow: 0 0 36px rgba(105, 232, 207, 0.09);
 }
 
+html[lang="zh-CN"] .hero__title-primary {
+  display: inline-block;
+  font-size: 0.84em;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+html[lang="zh-CN"] .hero__title-secondary {
+  display: inline-block;
+  font-size: 1.08em;
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+
 html[lang="fr"] .hero h1 {
   font-size: clamp(64px, 8.4vw, 132px);
   letter-spacing: -0.06em;
