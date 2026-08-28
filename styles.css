@@ -816,6 +816,11 @@ html[lang="zh-CN"] .camera-title__lead {
   50% { transform: translateY(clamp(120px, 24vw, 390px)); opacity: 0.85; }
 }
 
+.mode-card--camera .camera-demo__visual::after,
+.mode-card--camera .camera-demo__scan {
+  display: none;
+}
+
 .camera-demo__video {
   width: 100%;
   aspect-ratio: 16 / 9;
