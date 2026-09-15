@@ -35,9 +35,9 @@ body {
   top: 26px;
   right: max(24px, calc((100vw - var(--shell)) / 2));
   display: flex;
-  gap: 4px;
+  gap: 2px;
   align-items: center;
-  padding: 5px;
+  padding: 4px;
   border: 1px solid rgba(105, 232, 207, 0.54);
   background: #07110f;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
@@ -45,16 +45,23 @@ body {
 }
 
 .language-switch button {
-  min-width: 58px;
-  padding: 10px 12px;
+  min-width: 34px;
+  min-height: 36px;
+  padding: 8px 6px;
   border: 1px solid transparent;
   color: rgba(238, 242, 235, 0.58);
   background: transparent;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   cursor: pointer;
+}
+
+.language-switch__separator {
+  color: rgba(238, 242, 235, 0.3);
+  font-size: 10px;
+  user-select: none;
 }
 
 .language-switch button:hover {
@@ -1325,8 +1332,9 @@ footer {
   }
 
   .language-switch button {
-    min-width: 52px;
-    padding: 9px 10px;
+    min-width: 36px;
+    min-height: 40px;
+    padding: 8px 6px;
   }
 
   .hero__video {

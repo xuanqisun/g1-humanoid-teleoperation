@@ -27,14 +27,16 @@
 
     <title>AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China — Humanoid Teleoperation</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260915-bundle-links" />
+    <link rel="stylesheet" href="styles.css?v=20260915-compact-language" />
   </head>
 
   <body>
     <nav class="language-switch" data-i18n-aria-label="language.label" aria-label="Language">
-      <button type="button" data-language="en" aria-pressed="true">English</button>
-      <button type="button" data-language="fr" aria-pressed="false">Français</button>
-      <button type="button" data-language="zh" aria-pressed="false">中文</button>
+      <button type="button" data-language="en" lang="en" aria-label="English" title="English" aria-pressed="true">EN</button>
+      <span class="language-switch__separator" aria-hidden="true">/</span>
+      <button type="button" data-language="fr" lang="fr" aria-label="Français" title="Français" aria-pressed="false">FR</button>
+      <span class="language-switch__separator" aria-hidden="true">/</span>
+      <button type="button" data-language="zh" lang="zh-CN" aria-label="中文" title="中文" aria-pressed="false">CN</button>
     </nav>
 
     <header class="hero">
@@ -242,7 +244,7 @@
           <article id="single-camera" class="mode-card mode-card--camera reveal">
             <div class="mode-card__number">03</div>
             <div class="mode-card__heading">
-              <p class="mode-card__type" data-i18n="camera.type">ONE CAMERA · ZERO WEARABLES</p>
+              <p class="mode-card__type" data-i18n="camera.type">MONOCULAR VISION · ZERO WEARABLES</p>
               <h3 class="camera-title">
                 <span data-i18n="camera.takeOff">NO WEARABLES</span>
                 <span>
@@ -251,8 +253,7 @@
                 </span>
               </h3>
               <p data-i18n="camera.description">
-                Step in front of the camera and you're ready to move.
-                Teleoperation, with nothing to wear.
+                A single monocular camera captures your motion, with no wearable devices.
               </p>
             </div>
 
@@ -274,7 +275,7 @@
                   preload="none"
                   poster="assets/images/camera-poster.jpg?v=20260828-camera"
                   data-i18n-aria-label="camera.videoAria"
-                  aria-label="Single-camera whole-body teleoperation demonstration"
+                  aria-label="Monocular-vision whole-body teleoperation demonstration"
                 >
                   <source data-src="assets/videos/camera-teleop.mp4?v=20260827-camera" type="video/mp4" />
                 </video>
@@ -282,14 +283,14 @@
                   class="three-point-demo__play camera-demo__play media-play"
                   type="button"
                   data-i18n-aria-label="camera.playAria"
-                  aria-label="Play single-camera teleoperation video"
+                  aria-label="Play monocular-vision teleoperation video"
                 >
                   <span aria-hidden="true"></span>
                 </button>
               </div>
               <figcaption>
-                <span data-i18n="camera.caption">Single-Camera Teleoperation</span>
-                <small data-i18n="camera.captionMeta">ONE CAMERA · ZERO WEARABLES</small>
+                <span data-i18n="camera.caption">Monocular-Vision Teleoperation</span>
+                <small data-i18n="camera.captionMeta">MONOCULAR VISION · ZERO WEARABLES</small>
               </figcaption>
             </figure>
           </article>
@@ -402,6 +403,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260915-zh-solution"></script>
+    <script src="script.js?v=20260915-monocular-copy"></script>
   </body>
 </html>
