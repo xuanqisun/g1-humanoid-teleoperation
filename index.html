@@ -27,16 +27,16 @@
 
     <title>AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China — Humanoid Teleoperation</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260915-compact-language" />
+    <link rel="stylesheet" href="styles.css?v=20260915-language-dropdown" />
   </head>
 
   <body>
     <nav class="language-switch" data-i18n-aria-label="language.label" aria-label="Language">
-      <button type="button" data-language="en" lang="en" aria-label="English" title="English" aria-pressed="true">EN</button>
-      <span class="language-switch__separator" aria-hidden="true">/</span>
-      <button type="button" data-language="fr" lang="fr" aria-label="Français" title="Français" aria-pressed="false">FR</button>
-      <span class="language-switch__separator" aria-hidden="true">/</span>
-      <button type="button" data-language="zh" lang="zh-CN" aria-label="中文" title="中文" aria-pressed="false">CN</button>
+      <select id="language-select" data-i18n-aria-label="language.label" aria-label="Language">
+        <option value="en" lang="en">EN</option>
+        <option value="fr" lang="fr">FR</option>
+        <option value="zh" lang="zh-CN">CN</option>
+      </select>
     </nav>
 
     <header class="hero">
@@ -403,6 +403,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260915-monocular-copy"></script>
+    <script src="script.js?v=20260915-language-dropdown"></script>
   </body>
 </html>

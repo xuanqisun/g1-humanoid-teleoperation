@@ -192,7 +192,7 @@ const translations = {
   }
 };
 
-const languageButtons = document.querySelectorAll("[data-language]");
+const languageSelect = document.getElementById("language-select");
 
 const applyLanguage = (language) => {
   const copy = translations[language] || translations.en;
@@ -216,9 +216,7 @@ const applyLanguage = (language) => {
     if (value) element.setAttribute("aria-label", value);
   });
 
-  languageButtons.forEach((button) => {
-    button.setAttribute("aria-pressed", String(button.dataset.language === language));
-  });
+  languageSelect.value = language;
 
   document.querySelectorAll("[data-language-only]").forEach((element) => {
     element.hidden = element.dataset.languageOnly !== language;
@@ -245,9 +243,7 @@ try {
   initialLanguage = detectedLanguage;
 }
 
-languageButtons.forEach((button) => {
-  button.addEventListener("click", () => applyLanguage(button.dataset.language));
-});
+languageSelect.addEventListener("change", () => applyLanguage(languageSelect.value));
 
 applyLanguage(initialLanguage);
 
