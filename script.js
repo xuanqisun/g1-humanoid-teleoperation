@@ -220,6 +220,10 @@ const applyLanguage = (language) => {
     button.setAttribute("aria-pressed", String(button.dataset.language === language));
   });
 
+  document.querySelectorAll("[data-language-only]").forEach((element) => {
+    element.hidden = element.dataset.languageOnly !== language;
+  });
+
   try {
     localStorage.setItem("site-language", language);
   } catch (error) {

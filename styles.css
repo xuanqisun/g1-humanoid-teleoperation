@@ -557,7 +557,7 @@ html[lang="fr"] .hero__title-secondary {
   line-height: 0.94;
 }
 
-.mode-card__heading > p:last-child {
+.mode-card__heading > p:last-of-type {
   max-width: 570px;
   margin: 0;
   color: var(--muted);
@@ -577,6 +577,72 @@ html[lang="fr"] .hero__title-secondary {
 
 .mode-card--vr .mode-card__heading {
   margin-left: clamp(0px, 7vw, 104px);
+}
+
+.solution-callout {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 28px;
+  margin-top: 28px;
+  padding: 19px 23px;
+  border: 1px solid rgba(105, 232, 207, 0.2);
+  border-radius: 22px 22px 22px 6px;
+  color: var(--paper);
+  background: linear-gradient(120deg, rgba(105, 232, 207, 0.07), rgba(198, 255, 73, 0.025));
+  text-decoration: none;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+/* Keep commercial links out of non-Chinese layouts, including before JS loads. */
+.solution-callout[hidden],
+html:not([lang="zh-CN"]) .solution-callout {
+  display: none;
+}
+
+.solution-callout:hover {
+  border-color: rgba(198, 255, 73, 0.5);
+  background-color: rgba(105, 232, 207, 0.04);
+}
+
+.solution-callout:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 5px;
+}
+
+.solution-callout__copy {
+  display: grid;
+  gap: 6px;
+}
+
+.solution-callout__copy strong {
+  font-size: 15px;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
+.solution-callout__copy > span {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.solution-callout__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--signal);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.solution-callout__action > span {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .mode-card--camera .mode-card__heading {
@@ -1308,6 +1374,16 @@ footer {
     padding: 34px 25px;
   }
 
+  .solution-callout {
+    padding: 17px 18px;
+    gap: 12px;
+  }
+
+  .solution-callout--after-video {
+    max-width: calc(100% - 28px);
+    margin: 18px 14px 0;
+  }
+
   html[lang="zh-CN"] .mode-card h3 {
     font-size: 38px;
     line-height: 1.12;
@@ -1421,6 +1497,7 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .solution-callout { transition: none; }
   .hero__scroll i::after,
   .reveal { opacity: 1; transform: none; transition: none; }
   .camera-demo__scan,
