@@ -902,6 +902,52 @@ html[lang="zh-CN"] .camera-title__lead {
   letter-spacing: 0.12em;
 }
 
+.mode-card--headset {
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.35fr);
+  grid-template-areas: "video copy";
+  align-items: start;
+  padding-top: clamp(96px, 10vw, 152px);
+}
+
+.mode-card--headset .mode-card__heading {
+  grid-area: copy;
+  text-align: right;
+}
+
+.mode-card--headset .mode-card__heading > p:last-of-type {
+  margin-inline-start: auto;
+  white-space: pre-line;
+  text-wrap: pretty;
+}
+
+.mode-card--headset .mode-card__heading::after {
+  margin-inline-start: auto;
+  box-shadow: -84px 0 rgba(198, 255, 73, 0.28), -108px 0 rgba(198, 255, 73, 0.12);
+}
+
+.mode-card--headset .mode-card__number {
+  top: 56px;
+  right: 0;
+  left: auto;
+}
+
+.headset-demo {
+  grid-area: video;
+  top: 0;
+  margin-top: 56px;
+  justify-self: start;
+}
+
+.headset-demo figcaption {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.headset-demo figcaption small {
+  line-height: 1.6;
+}
+
 .camera-demo {
   margin: 0;
   overflow: hidden;
@@ -1324,6 +1370,16 @@ footer {
     top: 0;
     justify-self: center;
   }
+
+  .headset-demo {
+    margin-top: 0;
+  }
+
+  .mode-card--headset {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "copy" "video";
+    padding-top: 128px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -1430,6 +1486,10 @@ footer {
 
   .mode-card--vr {
     padding-inline: 14px;
+  }
+
+  .mode-card--headset .mode-card__number {
+    right: 14px;
   }
 
   .solution-callout {

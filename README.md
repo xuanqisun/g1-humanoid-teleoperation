@@ -6,6 +6,7 @@ presenting full-body humanoid teleoperation:
 
 - Full-body teleoperation with ankle trackers
 - 3PT VR teleoperation without ankle trackers
+- Headset-only hand-tracking teleoperation with grippers and dexterous hands in simulation
 - Single-camera teleoperation without wearables
 
 ## Preview locally

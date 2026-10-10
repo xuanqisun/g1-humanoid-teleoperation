@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#07110f" />
     <meta
       name="description"
-      content="Full-body humanoid teleoperation on Unitree G1, from wearable and single-camera control to dance-video and music-driven motion, by the AI-CDR Center."
+      content="Full-body humanoid teleoperation on Unitree G1, including headset-only hand tracking with grippers and dexterous hands in simulation, single-camera control, and dance-video and music-driven motion, by the AI-CDR Center."
     />
 
     <meta
@@ -15,7 +15,7 @@
     />
     <meta
       property="og:description"
-      content="Move G1 with your whole body, with two controllers, one camera, a dance video, or just music."
+      content="Move G1 with your whole body, two controllers, just a headset, one camera, a dance video, or music."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -27,7 +27,7 @@
 
     <title>AI-CDR Center（Center for Artificial Intelligence and Cross-Domain Robotics） · Hangzhou China — Humanoid Teleoperation</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=20260915-language-dropdown" />
+    <link rel="stylesheet" href="styles.css?v=20261010-headset-layout-v2" />
   </head>
 
   <body>
@@ -241,8 +241,52 @@
             </figure>
           </article>
 
-          <article id="single-camera" class="mode-card mode-card--camera reveal">
+          <article id="headset-only" class="mode-card mode-card--vr mode-card--headset reveal">
             <div class="mode-card__number">03</div>
+            <div class="mode-card__heading">
+              <p class="mode-card__type" data-i18n="headset.type">HEADSET ONLY · HAND TRACKING</p>
+              <h3 data-i18n="headset.title">Put down the controllers, control with your fingertips</h3>
+              <p data-i18n="headset.description">
+                With just a headset, raise your hands, turn your wrists, and move
+                your fingers — G1 follows your hands. From opening and closing
+                grippers to moving the fingers of dexterous hands, natural gestures
+                drive different end effectors.
+              </p>
+            </div>
+
+            <figure class="three-point-demo headset-demo">
+              <div class="three-point-demo__visual">
+                <video
+                  class="three-point-demo__video lazy-video"
+                  controls
+                  muted
+                  loop
+                  playsinline
+                  preload="none"
+                  poster="assets/images/headset-only-poster.jpg"
+                  data-i18n-aria-label="headset.videoAria"
+                  aria-label="Headset-only teleoperation with grippers and dexterous hands in simulation"
+                >
+                  <source data-src="assets/videos/headset-only-teleop.mp4" type="video/mp4" />
+                </video>
+                <button
+                  class="three-point-demo__play media-play"
+                  type="button"
+                  data-i18n-aria-label="headset.playAria"
+                  aria-label="Play headset-only teleoperation simulation video"
+                >
+                  <span aria-hidden="true"></span>
+                </button>
+              </div>
+              <figcaption>
+                <span data-i18n="headset.caption">Headset-Only Teleoperation</span>
+                <small data-i18n="headset.captionMeta">GRIPPERS · DEXTEROUS HANDS · SIMULATION DEMO</small>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article id="single-camera" class="mode-card mode-card--camera reveal">
+            <div class="mode-card__number">04</div>
             <div class="mode-card__heading">
               <p class="mode-card__type" data-i18n="camera.type">MONOCULAR VISION · ZERO WEARABLES</p>
               <h3 class="camera-title">
@@ -296,7 +340,7 @@
           </article>
 
           <article id="dance-video-motion" class="mode-card mode-card--dance reveal">
-            <div class="mode-card__number">04</div>
+            <div class="mode-card__number">05</div>
             <div class="mode-card__heading">
               <p class="mode-card__type" data-i18n="dance.type">DANCE VIDEO · MOTION RECREATION</p>
               <h3 class="dance-title">
@@ -346,7 +390,7 @@
           </article>
 
           <article id="music-driven-motion" class="mode-card mode-card--music reveal">
-            <div class="mode-card__number">05</div>
+            <div class="mode-card__number">06</div>
             <div class="mode-card__heading">
               <p class="mode-card__type" data-i18n="music.type">MUSIC-DRIVEN · ZERO EQUIPMENT</p>
               <h3 class="music-title">
@@ -403,6 +447,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260915-language-dropdown"></script>
+    <script src="script.js?v=20261010-headset-layout-v2"></script>
   </body>
 </html>
