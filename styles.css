@@ -903,9 +903,10 @@ html[lang="zh-CN"] .camera-title__lead {
 }
 
 .mode-card--headset {
-  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.35fr);
+  grid-template-columns: minmax(340px, min(44%, 480px)) minmax(0, 1fr);
   grid-template-areas: "video copy";
   align-items: start;
+  gap: clamp(32px, 4vw, 56px);
   padding-top: clamp(96px, 10vw, 152px);
 }
 
@@ -934,6 +935,7 @@ html[lang="zh-CN"] .camera-title__lead {
 .headset-demo {
   grid-area: video;
   top: 0;
+  width: min(100%, 480px);
   margin-top: 56px;
   justify-self: start;
 }
