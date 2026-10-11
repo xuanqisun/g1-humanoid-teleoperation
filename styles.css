@@ -946,6 +946,10 @@ html[lang="zh-CN"] .camera-title__lead {
   gap: 7px;
 }
 
+.headset-demo .three-point-demo__video {
+  aspect-ratio: 4 / 3;
+}
+
 .headset-demo figcaption small {
   line-height: 1.6;
 }
