@@ -913,7 +913,7 @@ html[lang="zh-CN"] .camera-title__lead {
 
 .headset-demo .demo__video {
   display: block;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 2 / 1;
   object-fit: contain;
 }
 
