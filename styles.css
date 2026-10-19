@@ -917,6 +917,26 @@ html[lang="zh-CN"] .camera-title__lead {
   object-fit: contain;
 }
 
+.mode-card--headset .headset-interaction-demo {
+  width: min(100%, 720px);
+  margin: clamp(28px, 4vw, 48px) auto 0;
+}
+
+.headset-interaction-demo .demo__video {
+  display: block;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.headset-interaction-demo figcaption {
+  flex-wrap: wrap;
+}
+
+.headset-interaction-demo figcaption small {
+  line-height: 1.6;
+  text-align: start;
+}
+
 .camera-demo {
   margin: 0;
   overflow: hidden;
