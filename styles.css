@@ -919,7 +919,11 @@ html[lang="zh-CN"] .camera-title__lead {
 
 .mode-card--headset .headset-interaction-demo {
   width: min(100%, 720px);
-  margin: clamp(28px, 4vw, 48px) auto 0;
+  margin: 0 auto;
+}
+
+.mode-card--headset .demo + .demo {
+  margin-top: clamp(28px, 4vw, 48px);
 }
 
 .headset-interaction-demo .demo__video {
